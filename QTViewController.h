@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  QTViewController.h
 //  QTHandleOrientationChanges
 //
 //  Created by Tang Qi on 06/03/2017.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface QTViewController : UIViewController
 
 @end
-

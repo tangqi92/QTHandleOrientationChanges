@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "QTViewController.h"
+#import <FLEX/FLEX.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +19,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    QTViewController *viewController = [[QTViewController alloc] init];
+    viewController.title = @"QTViewController";
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    self.window.rootViewController = navigationController;
+
+//    [[FLEXManager sharedManager] showExplorer];
+    
     return YES;
 }
 
