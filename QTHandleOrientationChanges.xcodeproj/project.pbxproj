@@ -10,10 +10,10 @@
 		35C8CB721E6D637C007332EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C8CB711E6D637C007332EC /* main.m */; };
 		35C8CB751E6D637C007332EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C8CB741E6D637C007332EC /* AppDelegate.m */; };
 		35C8CB7D1E6D637C007332EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35C8CB7C1E6D637C007332EC /* Assets.xcassets */; };
-		35C8CB801E6D637C007332EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35C8CB7E1E6D637C007332EC /* LaunchScreen.storyboard */; };
 		35C8CB8B1E6D637C007332EC /* QTHandleOrientationChangesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C8CB8A1E6D637C007332EC /* QTHandleOrientationChangesTests.m */; };
 		35C8CB961E6D637C007332EC /* QTHandleOrientationChangesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C8CB951E6D637C007332EC /* QTHandleOrientationChangesUITests.m */; };
 		35C8CBA51E6D63F2007332EC /* QTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C8CBA41E6D63F2007332EC /* QTViewController.m */; };
+		35E94D951E6FE1A800723790 /* QTModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E94D941E6FE1A800723790 /* QTModalViewController.m */; };
 		8BAA699E6B7C296BF759F0B8 /* libPods-QTHandleOrientationChanges.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 257EAC671BF820C24A9D7707 /* libPods-QTHandleOrientationChanges.a */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +41,6 @@
 		35C8CB731E6D637C007332EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		35C8CB741E6D637C007332EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		35C8CB7C1E6D637C007332EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		35C8CB7F1E6D637C007332EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35C8CB811E6D637C007332EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35C8CB861E6D637C007332EC /* QTHandleOrientationChangesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QTHandleOrientationChangesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35C8CB8A1E6D637C007332EC /* QTHandleOrientationChangesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTHandleOrientationChangesTests.m; sourceTree = "<group>"; };
@@ -51,6 +50,8 @@
 		35C8CB971E6D637C007332EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35C8CBA31E6D63F2007332EC /* QTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QTViewController.h; path = ../QTViewController.h; sourceTree = "<group>"; };
 		35C8CBA41E6D63F2007332EC /* QTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QTViewController.m; path = ../QTViewController.m; sourceTree = "<group>"; };
+		35E94D931E6FE1A800723790 /* QTModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTModalViewController.h; sourceTree = "<group>"; };
+		35E94D941E6FE1A800723790 /* QTModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTModalViewController.m; sourceTree = "<group>"; };
 		53115E5BD4D5B44053106535 /* Pods-QTHandleOrientationChanges.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QTHandleOrientationChanges.release.xcconfig"; path = "Pods/Target Support Files/Pods-QTHandleOrientationChanges/Pods-QTHandleOrientationChanges.release.xcconfig"; sourceTree = "<group>"; };
 		ECF04366E0AA8EFD964ABD81 /* Pods-QTHandleOrientationChanges.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QTHandleOrientationChanges.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QTHandleOrientationChanges/Pods-QTHandleOrientationChanges.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,8 +120,9 @@
 				35C8CB741E6D637C007332EC /* AppDelegate.m */,
 				35C8CBA31E6D63F2007332EC /* QTViewController.h */,
 				35C8CBA41E6D63F2007332EC /* QTViewController.m */,
+				35E94D931E6FE1A800723790 /* QTModalViewController.h */,
+				35E94D941E6FE1A800723790 /* QTModalViewController.m */,
 				35C8CB7C1E6D637C007332EC /* Assets.xcassets */,
-				35C8CB7E1E6D637C007332EC /* LaunchScreen.storyboard */,
 				35C8CB811E6D637C007332EC /* Info.plist */,
 				35C8CB701E6D637C007332EC /* Supporting Files */,
 			);
@@ -271,7 +273,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35C8CB801E6D637C007332EC /* LaunchScreen.storyboard in Resources */,
 				35C8CB7D1E6D637C007332EC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +349,7 @@
 				35C8CBA51E6D63F2007332EC /* QTViewController.m in Sources */,
 				35C8CB751E6D637C007332EC /* AppDelegate.m in Sources */,
 				35C8CB721E6D637C007332EC /* main.m in Sources */,
+				35E94D951E6FE1A800723790 /* QTModalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,17 +383,6 @@
 			targetProxy = 35C8CB921E6D637C007332EC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		35C8CB7E1E6D637C007332EC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				35C8CB7F1E6D637C007332EC /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		35C8CB981E6D637C007332EC /* Debug */ = {
@@ -487,11 +478,13 @@
 			baseConfigurationReference = ECF04366E0AA8EFD964ABD81 /* Pods-QTHandleOrientationChanges.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 4725AZSKC6;
 				INFOPLIST_FILE = QTHandleOrientationChanges/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.itangqi.QTHandleOrientationChanges;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -500,11 +493,13 @@
 			baseConfigurationReference = 53115E5BD4D5B44053106535 /* Pods-QTHandleOrientationChanges.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 4725AZSKC6;
 				INFOPLIST_FILE = QTHandleOrientationChanges/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.itangqi.QTHandleOrientationChanges;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

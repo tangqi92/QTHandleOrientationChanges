@@ -26,10 +26,14 @@
     QTViewController *viewController = [[QTViewController alloc] init];
     viewController.title = @"QTViewController";
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    self.window.rootViewController = navigationController;
-
-//    [[FLEXManager sharedManager] showExplorer];
     
+    // 在此处开启，则在 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator 中使用 [UIScreen mainScreen].bounds.size 获取的为旋转后的值。
+//    [[FLEXManager sharedManager] showExplorer];
+
+    self.window.rootViewController = navigationController;
+    // 在此处开启，则在 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator 中使用 [UIScreen mainScreen].bounds.size 获取的为旋转前的值。
+    [[FLEXManager sharedManager] showExplorer];
+
     return YES;
 }
 
