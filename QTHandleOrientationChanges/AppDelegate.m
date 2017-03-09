@@ -20,6 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    // 层级关系（UIWindowLevelNormal < UIWindowLevelStatusBar < UIWindowLevelAlert）
+    // self.window.windowLevel = UIWindowLevelNormal;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
@@ -27,13 +29,14 @@
     viewController.title = @"QTViewController";
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     
-    // 在此处开启，则在 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator 中使用 [UIScreen mainScreen].bounds.size 获取的为旋转后的值。
+    // 在此处及之前开启，则在 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator 中使用 [UIScreen mainScreen].bounds.size 获取的为旋转后的值。
 //    [[FLEXManager sharedManager] showExplorer];
+    // FLEXWindow.windowLevel = UIWindowLevelStatusBar + 100.0;
 
     self.window.rootViewController = navigationController;
-    // 在此处开启，则在 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator 中使用 [UIScreen mainScreen].bounds.size 获取的为旋转前的值。
-    [[FLEXManager sharedManager] showExplorer];
 
+    // 在此处及之后开启，则在 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator 中使用 [UIScreen mainScreen].bounds.size 获取的为旋转前的值。
+//    [[FLEXManager sharedManager] showExplorer];
     return YES;
 }
 

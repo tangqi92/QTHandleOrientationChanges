@@ -43,7 +43,6 @@
     
     UIBarButtonItem *cancelButtonItem = [[UIBarButtonItem alloc] initWithCustomView:cancelButton];
     [self.navigationItem setRightBarButtonItem:cancelButtonItem];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,6 +56,10 @@
  */
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
     [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+
+    // Test FLEX, check the conclusion in AppDelegate.m.
+    NSLog(@"[UIScreen mainScreen].bounds.size.width: %f", [UIScreen mainScreen].bounds.size.width);
+    NSLog(@"[UIScreen mainScreen].bounds.size.height: %f", [UIScreen mainScreen].bounds.size.height);
 
     // Code here will execute before the rotation begins.
     // Equivalent to placing it in the deprecated method -[willRotateToInterfaceOrientation:duration:].
@@ -84,10 +87,6 @@
                                      // Do any cleanup, if necessary.
                                  }];
 
-    // Test FLEX, check the conclusion in AppDelegate.m.
-    NSLog(@"[UIScreen mainScreen].bounds.size.width: %f", [UIScreen mainScreen].bounds.size.width);
-    NSLog(@"[UIScreen mainScreen].bounds.size.height: %f", [UIScreen mainScreen].bounds.size.height);
-    
     // The size which is the controller's view.
     NSLog(@"size.width: %f", size.width);
     NSLog(@"size.height: %f", size.height);
